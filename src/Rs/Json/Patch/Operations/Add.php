@@ -97,7 +97,7 @@ class Add extends Operation
                         array_splice($targetDocument, $lastPointerPart, 0, $replacementValue);
                     }
                 }
-                return json_encode($targetDocument, JSON_UNESCAPED_UNICODE);
+                return json_encode($targetDocument, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION);
             }
             if (count($pointerParts) === 1) {
                 if (is_array($targetDocument)) {
@@ -163,6 +163,6 @@ class Add extends Operation
             }
         }
 
-        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE);
+        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION);
     }
 }

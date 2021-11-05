@@ -68,7 +68,7 @@ class Replace extends Operation
             $this->getValue()
         );
 
-        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE);
+        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION);
     }
 
     /**

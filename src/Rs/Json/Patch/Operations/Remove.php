@@ -57,7 +57,7 @@ class Remove extends Operation
         $targetDocument = json_decode($targetDocument);
         $this->remove($targetDocument, $this->getPointerParts());
 
-        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE);
+        return json_encode($targetDocument, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION);
     }
 
     /**

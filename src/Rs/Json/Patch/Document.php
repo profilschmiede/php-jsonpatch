@@ -55,7 +55,7 @@ class Document
         if ($this->isEmptyPatchDocument($patchDocument)) {
             $exceptionMessage = sprintf(
                 "Unable to extract patch operations from '%s'",
-                json_encode($patchDocument)
+                json_encode($patchDocument, JSON_PRESERVE_ZERO_FRACTION)
             );
             throw new InvalidOperationException($exceptionMessage);
         }
@@ -92,7 +92,7 @@ class Document
         if (!isset($possiblePatchOperation->op)) {
             $exceptionMessage = sprintf(
                 "No operation set for patch operation '%s'",
-                json_encode($possiblePatchOperation)
+                json_encode($possiblePatchOperation, JSON_PRESERVE_ZERO_FRACTION)
             );
             throw new InvalidOperationException($exceptionMessage);
         }

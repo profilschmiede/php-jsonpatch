@@ -119,6 +119,6 @@ class Test extends Operation
         asort($get);
         asort($value);
 
-        return json_encode($get, JSON_UNESCAPED_UNICODE) === json_encode($value, JSON_UNESCAPED_UNICODE);
+        return json_encode($get, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION) === json_encode($value, JSON_UNESCAPED_UNICODE|JSON_PRESERVE_ZERO_FRACTION);
     }
 }

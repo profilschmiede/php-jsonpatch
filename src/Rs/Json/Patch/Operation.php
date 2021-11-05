@@ -36,7 +36,7 @@ abstract class Operation
         if (!property_exists($operation, 'path')) {
             $exceptionMessage = sprintf(
                 "No path property set for patch operation '%s'",
-                json_encode($operation)
+                json_encode($operation, JSON_PRESERVE_ZERO_FRACTION)
             );
             throw new InvalidOperationException($exceptionMessage);
         }
