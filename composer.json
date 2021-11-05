@@ -1,6 +1,6 @@
 {
-    "name": "php-jsonpatch/php-jsonpatch",
-    "description": "Implementation of JSON Patch (http://tools.ietf.org/html/rfc6902)",
+    "name": "profilschmiede/php-jsonpatch",
+    "description": "profilschmiede Implementation of JSON Patch (http://tools.ietf.org/html/rfc6902)",
     "keywords": ["json", "json patch", "json modification"],
     "homepage": "https://github.com/raphaelstolt/php-jsonpatch",
     "type": "library",
